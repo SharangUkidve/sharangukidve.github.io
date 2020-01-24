@@ -448,6 +448,7 @@ ul.browser-default li {
 .vue {
     background-image: url(./images/vue.svg);
     background-size: 180px !important;
+    background-position: bottom !important;
 }
 
 .angular {
