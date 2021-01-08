@@ -213,7 +213,8 @@ code {
 .name,
 .title {
   margin: 0;
-  font-family: 'Fredricka the Great', cursive;
+  font-family: inherit;
+  letter-spacing: 0.5px;
 }
 .name {
   font-size: 2.4rem;
@@ -236,14 +237,15 @@ code {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
+  font-family: 'Fredoka One', cursive;
 }
 .image {
   background-image: url(./assets/images/me.jpg);
-  height: 280px;
-  width: 280px;
+  height: 270px;
+  width: 270px;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 280px;
-  flex: 0 0 280px;
+  -ms-flex: 0 0 270px;
+  flex: 0 0 270px;
   border-radius: 50%;
   background-size: 120%;
   -webkit-box-shadow: inset 0 0 30px 10px #6d6c7980;
@@ -254,6 +256,7 @@ code {
   -o-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
+  margin: 5px;
 }
 .image:hover {
   -webkit-transform: scale(1.5);
