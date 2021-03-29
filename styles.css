@@ -416,7 +416,7 @@ code {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: calc(100% - 68px);
+  min-height: calc(100% - 68px);
 }
 .projects {
   display: -webkit-box;
@@ -432,6 +432,7 @@ code {
   flex: 0 0 calc(50% - 40px);
   margin: 16px;
   padding: 16px;
+  border-radius: 8px;
 }
 .project-header {
   display: -webkit-box;
