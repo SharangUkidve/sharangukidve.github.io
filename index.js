@@ -29,8 +29,14 @@ window.addEventListener('DOMContentLoaded', () => {
   const sectionElems = [];
 
   sides.forEach(side => {
-    const ctrl = document.querySelector('#' + side + 'Ctrl');
-    const pgSection = document.querySelector('#' + side + 'Pg');
+    const ctrl = document.querySelector(`#${side}Ctrl`);
+    const closeCtrl = document.querySelector(`#${side}Close`);
+    const pgSection = document.querySelector(`#${side}Pg`);
+
+    closeCtrl?.addEventListener('click', () => {
+      pgSection.classList.remove('visible');
+      overlay.classList.remove('visible');
+    });
 
     ctrl.addEventListener('click', () => {
       pgSection.classList.toggle('visible');
@@ -42,15 +48,15 @@ window.addEventListener('DOMContentLoaded', () => {
     sectionElems.push(pgSection);
   });
 
-  overlay.addEventListener('click', closePanel);
+  overlay.addEventListener('click', closeAllPanels);
 
   window.addEventListener('keyup', e => {
     if (e.keyCode === 27) {
-      closePanel();
+      closeAllPanels();
     }
   });
 
-  function closePanel() {
+  function closeAllPanels() {
     overlay.classList.remove('visible');
     sectionElems.forEach(side => side.classList.remove('visible'));
   }
